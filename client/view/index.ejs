@@ -1,0 +1,138 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenWeather</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+    <style>
+        body {
+            background: #dbdbdb;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .card {
+            width: 35em;
+            background: #fff;
+            margin: 2em auto;
+            border-radius: .2em;
+            padding-top: 1em;
+            padding-left: 1em;
+            padding-right: 1em;
+            height: 1700;
+        }
+
+        .city {
+            font-family: Roboto;
+            font-weight: 300;
+            font-size: 1.8em;
+            color: #5b5b5b;
+        }
+
+        .menu {
+            float: right;
+            font-family: Roboto;
+            font-size: .5em;
+            color: #5b5b5b;
+            margin-top: -.09em;
+            margin-right: -2em;
+            list-style: square;
+        }
+
+        .sun {
+            width: 4em;
+            height: 4em;
+            border-radius: 2.5em;
+            background: #FBD80A;
+            margin-top: 1em;
+        }
+
+        .temp {
+            float: right;
+            font-family: Roboto;
+            font-weight: 300;
+            font-size: 8.5em;
+            margin-top: -.75em;
+            color: #5b5b5b;
+        }
+
+        .variations {
+            font-family: Roboto;
+            font-wight: 300;
+            color: #8c8c8c;
+            list-style: none;
+            margin-left: -2em;
+        }
+
+        .mph {
+            font-size: .8em;
+        }
+
+        .speed:before {
+            content: url('https://i.imgur.com/luN0Jmq.png');
+        }
+
+        .forecast {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .day {
+            display: block;
+            width: 21.5%;
+            height: 9em;
+            float: left;
+            margin: 0 .375em .5em;
+            text-align: center;
+            font-family: Roboto;
+            color: #5b5b5b;
+            border-right: .1em solid #d9d9d9;
+            line-height: 2;
+        }
+
+        .fri {
+            border-right: none;
+        }
+
+        .highTemp {
+            font-weight: bold;
+        }
+
+        .lowTemp {
+            color: #8c8c8c;
+        }
+
+        .cloudy {
+            content: url('https://i.imgur.com/0PIYfV8.png');
+        }
+
+        .sunny {
+            content: url('https://i.imgur.com/RdBr2SD.png');
+        }
+    </style>
+</head>
+
+<body>
+    <input type='hidden' id='clientId' value="<%=clientId%>"></input>
+    <div id='container'></div>
+
+    <script>
+        var loadJS = function (url, location) {
+            var scriptTag = document.createElement('script');
+            scriptTag.src = url;
+            location.appendChild(scriptTag);
+        };
+
+        loadJS('js/vendor.bundle.js', document.body);
+        setTimeout(() => {
+            loadJS('js/source.bundle.js', document.body);
+        }, 2000);
+
+    </script>
+</body>
+
+</html>

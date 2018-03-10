@@ -6,7 +6,7 @@ A web app for displaying 5 days weatherforecast for a city (`Noida, India`).
 
 Deployed to heroku.
 
-**[Open Weather]()**
+**[Open Weather](https://openweather12.herokuapp.com/)**
 
 ## Documentation
 

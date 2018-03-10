@@ -8,5 +8,5 @@ const failure = (status, result) => action(status, result, weatherAction.ERROR_F
 
 export const getWeatherAsync = (clientId, city, country) => (dispatch) => {
     httpRequest.get(
-        `http://api.openweathermap.org/data/2.5/forecast?q=${city},${country}&mode=json&appid=${clientId}`, success, failure, dispatch)
+        `https://api.openweathermap.org/data/2.5/forecast?q=${city},${country}&mode=json&appid=${clientId}`, success, failure, dispatch)
 };
